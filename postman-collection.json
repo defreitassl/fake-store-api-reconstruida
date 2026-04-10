@@ -1,0 +1,262 @@
+{
+  "info": {
+    "name": "Fake Store API",
+    "description": "Collection para testar a API Fake Store local ou em produção",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Produtos",
+      "item": [
+        {
+          "name": "Listar todos os produtos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/products",
+              "host": ["{{BASE_URL}}"],
+              "path": ["products"]
+            },
+            "description": "Retorna um array com todos os produtos"
+          }
+        },
+        {
+          "name": "Obter um produto por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/products/1",
+              "host": ["{{BASE_URL}}"],
+              "path": ["products", "1"]
+            },
+            "description": "Retorna um único produto baseado no ID"
+          }
+        },
+        {
+          "name": "Criar novo produto",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Novo Produto\",\n  \"price\": 29.99,\n  \"description\": \"Descrição do produto\",\n  \"image\": \"https://via.placeholder.com/150\",\n  \"category\": \"electronics\"\n}"
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/products",
+              "host": ["{{BASE_URL}}"],
+              "path": ["products"]
+            },
+            "description": "Cria um novo produto (não persiste se usar free tier com reciclo)"
+          }
+        },
+        {
+          "name": "Atualizar produto",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Produto Atualizado\",\n  \"price\": 39.99,\n  \"description\": \"Descrição atualizada\",\n  \"image\": \"https://via.placeholder.com/150\",\n  \"category\": \"electronics\"\n}"
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/products/1",
+              "host": ["{{BASE_URL}}"],
+              "path": ["products", "1"]
+            },
+            "description": "Atualiza um produto existente"
+          }
+        },
+        {
+          "name": "Deletar produto",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/products/1",
+              "host": ["{{BASE_URL}}"],
+              "path": ["products", "1"]
+            },
+            "description": "Deleta um produto"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Carrinhos",
+      "item": [
+        {
+          "name": "Listar todos os carrinhos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/carts",
+              "host": ["{{BASE_URL}}"],
+              "path": ["carts"]
+            },
+            "description": "Retorna um array com todos os carrinhos"
+          }
+        },
+        {
+          "name": "Obter carrinho por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/carts/1",
+              "host": ["{{BASE_URL}}"],
+              "path": ["carts", "1"]
+            },
+            "description": "Retorna um carrinho específico"
+          }
+        },
+        {
+          "name": "Criar novo carrinho",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": 1,\n  \"date\": \"2023-10-01\",\n  \"products\": [\n    {\n      \"productId\": 1,\n      \"quantity\": 2\n    },\n    {\n      \"productId\": 5,\n      \"quantity\": 1\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/carts",
+              "host": ["{{BASE_URL}}"],
+              "path": ["carts"]
+            },
+            "description": "Cria um novo carrinho com produtos"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Usuários",
+      "item": [
+        {
+          "name": "Listar todos os usuários",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/users",
+              "host": ["{{BASE_URL}}"],
+              "path": ["users"]
+            },
+            "description": "Retorna um array com todos os usuários"
+          }
+        },
+        {
+          "name": "Obter usuário por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/users/1",
+              "host": ["{{BASE_URL}}"],
+              "path": ["users", "1"]
+            },
+            "description": "Retorna um usuário específico"
+          }
+        },
+        {
+          "name": "Criar novo usuário",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"novo.usuario@example.com\",\n  \"username\": \"novouser123\",\n  \"password\": \"Senha123!\",\n  \"name\": {\n    \"firstname\": \"Novo\",\n    \"lastname\": \"Usuário\"\n  },\n  \"address\": {\n    \"city\": \"São Paulo\",\n    \"street\": \"Rua das Flores 123\",\n    \"number\": 123,\n    \"zipcode\": \"01310-100\",\n    \"geolocation\": {\n      \"lat\": \"-23.5505\",\n      \"long\": \"-46.6333\"\n    }\n  },\n  \"phone\": \"11 3333-4444\"\n}"
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/users",
+              "host": ["{{BASE_URL}}"],
+              "path": ["users"]
+            },
+            "description": "Cria um novo usuário"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Autenticação",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"mor_2314\",\n  \"password\": \"83r5^_\"\n}"
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/auth/login",
+              "host": ["{{BASE_URL}}"],
+              "path": ["auth", "login"]
+            },
+            "description": "Faz login e retorna um JWT token. Use o token nos headers das requisições autenticadas."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Documentação",
+      "item": [
+        {
+          "name": "Home - Documentação da API",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/",
+              "host": ["{{BASE_URL}}"],
+              "path": [""]
+            },
+            "description": "Carrega a página de documentação da API"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "http://localhost:8765",
+      "type": "string",
+      "description": "URL base da API. Mude para a URL de produção quando deployar no Render.com"
+    },
+    {
+      "key": "TOKEN",
+      "value": "",
+      "type": "string",
+      "description": "JWT Token obtido após login. Copie e cole aqui após fazer login"
+    }
+  ]
+}

@@ -43,15 +43,34 @@ app.use('/auth', authRoute);
 //mongoose
 mongoose.set('useFindAndModify', false);
 mongoose.set('useUnifiedTopology', true);
-mongoose
-	.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
-	.then(() => {
-		app.listen(port, () => {
-			console.log('connect');
+
+const connectDB = async () => {
+	try {
+		await mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+		console.log('✓ MongoDB conectado com sucesso');
+		
+		const server = app.listen(port, () => {
+			console.log(`✓ Servidor rodando em http://localhost:${port}`);
+			console.log(`✓ Ambiente: ${process.env.NODE_ENV || 'desenvolvimento'}`);
 		});
-	})
-	.catch((err) => {
-		console.log(err);
-	});
+
+		// Graceful shutdown
+		process.on('SIGTERM', () => {
+			console.log('\n✓ SIGTERM recebido. Encerrando gracefully...');
+			server.close(() => {
+				console.log('✓ Servidor finalizado');
+				mongoose.connection.close(false, () => {
+					console.log('✓ Conexão MongoDB fechada');
+					process.exit(0);
+				});
+			});
+		});
+	} catch (err) {
+		console.error('✗ Erro ao conectar MongoDB:', err.message);
+		process.exit(1);
+	}
+};
+
+connectDB();
 
 module.exports = app;

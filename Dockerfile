@@ -1,13 +1,18 @@
-FROM node:17
+FROM node:17-alpine
 
 WORKDIR /usr/src/app
 
+# Copiar apenas package.json primeiro (para melhor cache do Docker)
 COPY package*.json ./
 
-RUN npm install
+# Instalar apenas dependências de produção
+RUN npm ci --only=production
 
+# Copiar o resto do código
 COPY . .
 
-EXPOSE $PORT
+# Expor porta
+EXPOSE 8765
 
-CMD [ "node", "server.js" ]
+# Comando para iniciar a aplicação
+CMD ["node", "server.js"]

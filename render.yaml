@@ -1,0 +1,18 @@
+# Configuração para deploy automático no Render.com
+# Este arquivo ajuda a configurar o deploy com um clique
+
+services:
+  - type: web
+    name: fake-store-api
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: PORT
+        value: "8765"
