@@ -1,7 +1,7 @@
 # Dependencies
 node_modules/
-package-lock.json
 yarn.lock
+# MANTÉM package-lock.json para uso em produção (npm ci)
 
 # Database
 mongo_data/
@@ -20,6 +20,10 @@ mongo_data/
 *.swo
 *~
 .DS_Store
+
+CHANGES.md
+DEPLOy-CHECKLIST.md
+QUICK-START.md
 
 # Build
 dist/
