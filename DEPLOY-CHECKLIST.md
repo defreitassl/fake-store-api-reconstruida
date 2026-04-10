@@ -86,13 +86,13 @@ Use este checklist para garantir que tudo está configurado corretamente.
 ## 🧪 Testes em Produção
 
 ### URL da API
-- [ ] Recebeu URL como: `https://fake-store-api-xxxxx.onrender.com`
+- [ ] Recebeu URL como: `https://fake-store-api-reconstruida.onrender.com`
 - [ ] Guardou essa URL em lugar seguro
 
 ### Teste Básico
 ```bash
 # Em um terminal, execute:
-curl https://fake-store-api-xxxxx.onrender.com/products
+curl https://fake-store-api-reconstruida.onrender.com/products
 
 # Deve retornar um JSON com produtos
 ```
@@ -126,10 +126,10 @@ curl https://fake-store-api-xxxxx.onrender.com/products
 - [ ] Explicou como substituir URL antiga:
   ```javascript
   // ANTES
-  const API_URL = 'https://fakestoreapi.com'
+  const API_URL = 'https://fake-store-api-reconstruida.onrender.com'
   
   // DEPOIS
-  const API_URL = 'https://fake-store-api-xxxxx.onrender.com'
+  const API_URL = 'https://fake-store-api-reconstruida.onrender.com'
   ```
 - [ ] Enviou exemplos de requests (GET, POST, etc)
 - [ ] Explicou que CORS está habilitado (sem problemas)
@@ -229,3 +229,5 @@ Se todos os itens estão marcados ✅, sua API está:
 ---
 
 Atualizado em: **Abril, 2026**
+
+

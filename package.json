@@ -1,7 +1,7 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "FakeStoreAPI is a free online REST API that provides you fake e-commerce JSON data",
+  "description": "Fake Store API Reconstruída - online REST API para dados de e-commerce hospedada em Render.com",
   "main": "server.js",
   "scripts": {
     "test": "jest",

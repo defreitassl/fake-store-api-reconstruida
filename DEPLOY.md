@@ -123,25 +123,25 @@ mongodb+srv://fakestore:SuaSenhaForte123!@seu-cluster.mongodb.net/fake_store?ret
 
 Após o deploy, você receberá uma URL como:
 ```
-https://fake-store-api-xxxxx.onrender.com
+https://fake-store-api-reconstruida.onrender.com
 ```
 
 ### Testes rápidos:
 
 **Listar produtos:**
 ```bash
-curl https://fake-store-api-xxxxx.onrender.com/products
+curl https://fake-store-api-reconstruida.onrender.com/products
 ```
 
 **Documentação:**
 ```
-https://fake-store-api-xxxxx.onrender.com/
+https://fake-store-api-reconstruida.onrender.com/
 ```
 
 ### Com Insomnia/Postman:
-- GET `https://fake-store-api-xxxxx.onrender.com/products`
-- GET `https://fake-store-api-xxxxx.onrender.com/products/1`
-- POST `https://fake-store-api-xxxxx.onrender.com/auth/login`
+- GET `https://fake-store-api-reconstruida.onrender.com/products`
+- GET `https://fake-store-api-reconstruida.onrender.com/products/1`
+- POST `https://fake-store-api-reconstruida.onrender.com/auth/login`
 
 ---
 
@@ -150,7 +150,7 @@ https://fake-store-api-xxxxx.onrender.com/
 Após validar que a API está funcionando, compartilhe a URL:
 
 ```
-https://fake-store-api-xxxxx.onrender.com/
+https://fake-store-api-reconstruida.onrender.com/
 ```
 
 **Para substituir a API oficial nos projetos dos alunos:**
@@ -158,10 +158,10 @@ https://fake-store-api-xxxxx.onrender.com/
 Nos arquivos JavaScript donde usam a API antiga:
 ```javascript
 // ANTES
-const API_URL = 'https://fakestoreapi.com'
+const API_URL = 'https://fake-store-api-reconstruida.onrender.com'
 
 // DEPOIS
-const API_URL = 'https://fake-store-api-xxxxx.onrender.com'
+const API_URL = 'https://fake-store-api-reconstruida.onrender.com'
 ```
 
 ---
@@ -234,3 +234,5 @@ Render detecta a mudança e faz deploy automaticamente (em 1-2 minutos)! ✅
 ---
 
 **Pronto! Sua API está no ar! 🎉**
+
+

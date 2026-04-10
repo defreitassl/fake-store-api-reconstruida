@@ -213,10 +213,11 @@ ISC
 
 ## ✨ Créditos
 
-Baseado no [FakeStoreAPI](https://fakestoreapi.com)
+Baseado no [Fake Store API original](https://fake-store-api-reconstruida.onrender.com)
 
 Preparado para deploy escolar com ❤️
 
 ---
 
 **Próximo passo:** Leia [`DEPLOY.md`](./DEPLOY.md) para colocar a API no ar!
+

@@ -2,7 +2,7 @@
 
 # Script para testar se a API está funcionando
 # Use: ./test-api.sh http://localhost:8765
-# ou:  ./test-api.sh https://fake-store-api-xxxxx.onrender.com
+# ou:  ./test-api.sh https://fake-store-api-reconstruida.onrender.com
 
 if [ -z \"$1\" ]; then
     echo \"❌ Erro: Forneça a URL da API\"
@@ -88,3 +88,5 @@ else
     echo \"⚠️  Alguns testes falharam. Verifique a API.\"
     exit 1
 fi
+
+

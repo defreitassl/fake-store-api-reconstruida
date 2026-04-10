@@ -61,7 +61,7 @@ Configuração para facilitar deploy no Render.com
              ▼
 ┌─────────────────────────────────────┐
 │    Render.com (Node.js Server)      │
-│  - fake-store-api-xxxxx.onrender.com│
+│  - https://fake-store-api-reconstruida.onrender.com│
 │  - Autoscaling                      │
 │  - SSL Automático                   │
 └────────────┬────────────────────────┘
@@ -150,3 +150,4 @@ Use um serviço grátis de "ping" como:
 **Status:** ✅ **PRONTO PARA DEPLOY!**
 
 Siga exatamente os passos em `DEPLOY.md` e em 30 minutos sua API está funcionando! 🚀
+

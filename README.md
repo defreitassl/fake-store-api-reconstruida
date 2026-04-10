@@ -1,10 +1,10 @@
-# FakeStoreAPI
+# Fake Store API Reconstruída
 
-[FakeStoreAPI](https://fakestoreapi.com) is a free online REST API that you can use whenever you need Pseudo-real data for
+[Fake Store API Reconstruída](https://fake-store-api-reconstruida.onrender.com) is a free online REST API that you can use whenever you need pseudo-real data for
 your e-commerce or shopping website without running any server-side code.
-It's awesome for teaching purposes, sample codes, tests and etc.
+It's awesome for teaching purposes, sample codes, tests and more.
 
-You can visit in detail docs in [FakeStoreAPI](https://fakestoreapi.com) for more information.
+You can visit the API docs at [https://fake-store-api-reconstruida.onrender.com](https://fake-store-api-reconstruida.onrender.com).
 
 ## Why?
 
@@ -17,10 +17,10 @@ so I decided to create this simple web service with NodeJs(express) and MongoDB 
 
 There are 4 main resources need in shopping prototypes:
 
-- Products https://fakestoreapi.com/products
-- Carts https://fakestoreapi.com/carts
-- Users https://fakestoreapi.com/users
-- Login Token https://fakestoreapi.com/auth/login
+- Products https://fake-store-api-reconstruida.onrender.com/products
+- Carts https://fake-store-api-reconstruida.onrender.com/carts
+- Users https://fake-store-api-reconstruida.onrender.com/users
+- Login Token https://fake-store-api-reconstruida.onrender.com/auth/login
 
 ### New! "Rating" (includes rate and count) has been added to each product object!
 
@@ -31,7 +31,7 @@ you can fetch data with any kind of methods you know(fetch API, Axios, jquery aj
 ### Get all products
 
 ```js
-fetch("https://fakestoreapi.com/products")
+fetch("https://fake-store-api-reconstruida.onrender.com/products")
   .then((res) => res.json())
   .then((json) => console.log(json));
 ```
@@ -39,7 +39,7 @@ fetch("https://fakestoreapi.com/products")
 ### Get a single product
 
 ```js
-fetch("https://fakestoreapi.com/products/1")
+fetch("https://fake-store-api-reconstruida.onrender.com/products/1")
   .then((res) => res.json())
   .then((json) => console.log(json));
 ```
@@ -47,7 +47,7 @@ fetch("https://fakestoreapi.com/products/1")
 ### Add new product
 
 ```js
-fetch("https://fakestoreapi.com/products", {
+fetch("https://fake-store-api-reconstruida.onrender.com/products", {
   method: "POST",
   body: JSON.stringify({
     title: "test product",
@@ -77,7 +77,7 @@ Note: Posted data will not really insert into the database and just return a fak
 ### Updating a product
 
 ```js
-fetch("https://fakestoreapi.com/products/7", {
+fetch("https://fake-store-api-reconstruida.onrender.com/products/7", {
   method: "PUT",
   body: JSON.stringify({
     title: "test product",
@@ -103,7 +103,7 @@ fetch("https://fakestoreapi.com/products/7", {
 ```
 
 ```js
-fetch("https://fakestoreapi.com/products/8", {
+fetch("https://fake-store-api-reconstruida.onrender.com/products/8", {
   method: "PATCH",
   body: JSON.stringify({
     title: "test product",
@@ -133,7 +133,7 @@ Note: Edited data will not really be updated into the database.
 ### Deleting a product
 
 ```js
-fetch("https://fakestoreapi.com/products/8", {
+fetch("https://fake-store-api-reconstruida.onrender.com/products/8", {
   method: "DELETE",
 });
 ```
@@ -146,7 +146,7 @@ You can use query string to limit results or sort by asc|desc
 
 ```js
 // Will return all the posts that belong to the first user
-fetch("https://fakestoreapi.com/products?limit=3&sort=desc")
+fetch("https://fake-store-api-reconstruida.onrender.com/products?limit=3&sort=desc")
   .then((res) => res.json())
   .then((json) => console.log(json));
 ```
@@ -288,3 +288,4 @@ POST:
 - Add graphql support
 - Add pagination
 - Add another language support
+

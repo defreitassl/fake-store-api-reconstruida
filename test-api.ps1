@@ -1,6 +1,6 @@
 # Script para testar se a API está funcionando (Windows)
 # Use: .\test-api.ps1 http://localhost:8765
-# ou:  .\test-api.ps1 https://fake-store-api-xxxxx.onrender.com
+# ou:  .\test-api.ps1 https://fake-store-api-reconstruida.onrender.com
 
 param(
     [string]$ApiUrl = \"http://localhost:8765\"
@@ -99,3 +99,5 @@ if ($testsFailed -eq 0) {
     Write-Host \"⚠️  Alguns testes falharam. Verifique a API.\" -ForegroundColor Yellow
     exit 1
 }
+
+

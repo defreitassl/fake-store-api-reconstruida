@@ -81,11 +81,11 @@
 ### 4️⃣ Teste & Compartilhe (5 minutos)
 ```bash
 📌 Teste endpoints:
-   curl https://fake-store-api-xxxxx.onrender.com/products
+   curl https://fake-store-api-reconstruida.onrender.com/products
    
 📌 Compartilhe URL com alunos:
-   Eles substituem: https://fakestoreapi.com
-   Por: https://fake-store-api-xxxxx.onrender.com
+   Eles substituem: https://fake-store-api-reconstruida.onrender.com
+   Por: https://fake-store-api-reconstruida.onrender.com
 ```
 
 **TEMPO TOTAL: ~40 MINUTOS**
@@ -231,3 +231,5 @@ Mesmo que pareça muito, a verdade é:
 
 *Documento criado em: Abril, 2026*
 *Projeto: Fake Store API para Eduacao*
+
+
